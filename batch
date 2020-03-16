@@ -1,0 +1,3 @@
+ls -la
+env
+echo Hello World!
