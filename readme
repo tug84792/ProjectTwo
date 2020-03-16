@@ -1,0 +1,75 @@
+NAME: myshell
+
+*** Keep pressing enter to continue! ***
+
+ABOUT:
+
+
+        This program simulates a simple UNIX shell. It can read in arguments either from your keyboard input, or a file.
+        There are a number of commands as well as actions supported. These will be discussed below.
+
+
+        To execute a command, simply type and press the Enter key when done.
+
+
+BUILT-IN COMMANDS:
+
+
+    cd            Change the current directory to the one specified after the command. If the directory specified does not exist
+                  report an error. If there is no argument, change to $HOME.
+    
+    clr/clear     Clears the screen.
+
+
+    ls            This will list all the files/contents of a given directory.
+
+
+    environ       This will provide a list of all the current environment variables.
+
+
+    echo          Any text followed by this word will be printed onto the screen.
+
+
+    help          This will display this very manual onto the screen.
+
+
+    pause         Pausing will halt the shell until you press enter.
+
+
+    quit/exit     You may stop the shell by typing in either of these words.
+
+
+REDIRECTION:
+
+
+        You may take the output of one command, and turn it into the input of another. Here is the basic syntax:
+        
+            myshell> firstCommand | secondCommand
+            
+        Here, commandOne will send its data through a pipe to secondCommand.
+
+
+        Command outputs can also be redirected to a txt file using '>'. Here is the basic syntax:
+        
+            myshell> command > file.txt
+            
+        In case a file does not exist, it will be made upon execution of the command.
+
+
+        The reverse can also happen using likewise logic and/or syntax:
+        
+            myshell> command < file.txt
+            
+        Command will receive its arguments from the text file.
+
+
+BACKGROUND PROCESS:
+
+
+        The shell will run a command and wait for it to be completed before allowing the user to do anything else. But a user 
+        may run a program using '&'. Simply add this character to the end of a command. For example:
+      
+            myshell> [command name]&
+
+
+        With this, a process may run in the background, while allowing the user to continue interacting with the shell.
